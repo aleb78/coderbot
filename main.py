@@ -280,6 +280,22 @@ def handle_program_status():
 def handle_tutorial():
     return redirect("/blockly-tutorial/apps/index.html", code=302)
 
+
+@app.route("/custom", methods=["GET"])
+def custom_page():
+    return """
+<html>
+<head>
+CUSTOM PAGE
+</head>
+<body>
+CIAO
+&nbsp;
+</body>
+</html>
+"""
+
+
 def execute(command):
   process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
